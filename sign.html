@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box signIn">
+            <h2>Already Have an Account</h2>
+            <button class="boxSignInBtn">Sign in</button>
+        </div>
+        <div class="box signUp">
+            <h2>Don't Have an Account</h2>
+            <button class="boxSignUpBtn">Sign up</button>
+            
+        </div>
+        <div class="formBox">
+            <div class="form signInForm">
+                <form>
+                    <h3>Sign In</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>       
+            <div class="form signUpForm">
+                <form>
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="submit" value="Register">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let signInBtn = document.querySelector(".boxSignInBtn")
+        let signUpBtn = document.querySelector(".boxSignUpBtn")
+        console.log(signUpBtn)
+        let body = document.querySelector("body")
+        signUpBtn.addEventListener("click",()=>{
+            body.classList.add('slide')
+            signUpBtn.style.backgroundColor = "red"
+            signUpBtn.style.color = "black"
+            
+        })
+        signInBtn.addEventListener("click",()=>{
+            body.classList.remove('slide')
+            signUpBtn.style.backgroundColor = "white"
+            signUpBtn.style.color = "black"
+            
+        })
+    </script>
+</body>
+</html>
